@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jump Game</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #f0f0f0; font-family: sans-serif; }
+        #ui { position: absolute; top: 20px; left: 20px; color: #333; pointer-events: none; }
+        #score { font-size: 24px; font-weight: bold; }
+        #instructions { font-size: 14px; margin-top: 10px; }
+        #game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div id="score">Score: 0</div>
+        <div id="instructions">Press and hold to charge, release to jump!</div>
+    </div>
+    <div id="game-over">
+        <h1>Game Over!</h1>
+        <p id="final-score">Your score: 0</p>
+        <button onclick="resetGame()">Play Again</button>
+    </div>
+
+    <!-- Use Three.js for 3D rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="/game.js"></script>
+</body>
+</html>
